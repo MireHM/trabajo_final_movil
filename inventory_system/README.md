@@ -288,5 +288,3 @@ Este proyecto fue desarrollado como trabajo final para la materia de Desarrollo 
 Este proyecto es de uso académico.
 
 ---
-
-**Desarrollado con ❤️ usando Flutter y Dart**

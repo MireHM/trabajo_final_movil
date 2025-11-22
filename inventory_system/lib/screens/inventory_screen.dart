@@ -181,7 +181,7 @@ class _InventoryScreenState extends ConsumerState<InventoryScreen> {
     );
   }
 
-  List<InventoryItem> _filterInventory(List<InventoryItem> inventory) {
+  List<InventoryData> _filterInventory(List<InventoryData> inventory) {
     if (_filterType == 'all') {
       return inventory;
     } else if (_filterType == 'store' && _selectedLocation != null) {
@@ -196,7 +196,7 @@ class _InventoryScreenState extends ConsumerState<InventoryScreen> {
     return [];
   }
 
-  String _getLocationInfo(InventoryItem item) {
+  String _getLocationInfo(InventoryData item) {
     final storesAsync = ref.read(storesProvider);
     final warehousesAsync = ref.read(warehousesProvider);
 

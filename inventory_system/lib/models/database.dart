@@ -176,15 +176,15 @@ class AppDatabase extends _$AppDatabase {
 
   // ==================== INVENTARIO ====================
   
-  Future<List<InventoryItem>> getInventoryByStore(int storeId) =>
+  Future<List<InventoryData>> getInventoryByStore(int storeId) =>
       (select(inventory)..where((i) => i.storeId.equals(storeId))).get();
   
-  Future<List<InventoryItem>> getInventoryByWarehouse(int warehouseId) =>
+  Future<List<InventoryData>> getInventoryByWarehouse(int warehouseId) =>
       (select(inventory)..where((i) => i.warehouseId.equals(warehouseId))).get();
   
-  Future<List<InventoryItem>> getAllInventory() => select(inventory).get();
+  Future<List<InventoryData>> getAllInventory() => select(inventory).get();
   
-  Future<InventoryItem?> getInventoryItem(int productId, int? storeId, int? warehouseId) {
+  Future<InventoryData?> getInventoryItem(int productId, int? storeId, int? warehouseId) {
     final query = select(inventory)..where((i) => i.productId.equals(productId));
     if (storeId != null) {
       query.where((i) => i.storeId.equals(storeId));

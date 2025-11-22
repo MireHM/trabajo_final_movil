@@ -201,7 +201,7 @@ class MyApp extends StatelessWidget {
         ),
         textTheme: GoogleFonts.interTextTheme(),
         useMaterial3: true,
-        cardTheme: CardTheme(
+        cardTheme: CardThemeData(
           elevation: 2,
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(12),
